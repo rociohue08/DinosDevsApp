@@ -1,9 +1,17 @@
+<<<<<<< HEAD
 <template>
   <div class="dino-info">
     <h2>Información de Dinosaurios</h2>
     <div class="dino-grid">
       <DinoCard v-for="dino in dinosaurios" :key="dino.nombreCientifico" :dino="dino" />
     </div>
+=======
+<!-- src/views/Informacion.vue -->
+<template>
+  <div>
+    <h2>Información de Dinosaurios</h2>
+    <DinoCard v-for="dino in dinosaurios" :key="dino.id" :dino="dino" />
+>>>>>>> 76a4494177e8c86dceca107c080705cf4c606608
   </div>
 </template>
 
@@ -20,6 +28,7 @@ export default {
   },
 }
 </script>
+<<<<<<< HEAD
 
 <style scoped>
 /* Estilo principal */
@@ -59,3 +68,5 @@ h2 {
   }
 }
 </style>
+=======
+>>>>>>> 76a4494177e8c86dceca107c080705cf4c606608

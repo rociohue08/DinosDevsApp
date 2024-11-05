@@ -1,5 +1,6 @@
 [
   {
+<<<<<<< HEAD
     "nombreCientifico": "Tyrannosaurus Rex",
     "nombreComun": "T. Rex",
     "tipoAlimentacion": "Carnívoro",
@@ -133,4 +134,13 @@
   "image": "../public/images/carnotaurus.png"
 }
 
+=======
+    "nombre": "Tiranosaurio Rex",
+    "descripcion": "Un gran depredador del período Cretácico."
+  },
+  {
+    "nombre": "Triceratops",
+    "descripcion": "Un herbívoro famoso por sus tres cuernos."
+  }
+>>>>>>> 76a4494177e8c86dceca107c080705cf4c606608
 ]

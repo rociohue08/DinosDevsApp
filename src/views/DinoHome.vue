@@ -5,6 +5,7 @@
       DinosDevs es una página interactiva diseñada especialmente para niños, donde la fascinante era de los dinosaurios cobra vida. Aquí, los pequeños exploradores pueden sumergirse en un mundo lleno de información emocionante sobre estos majestuosos reptiles prehistóricos.
     </p>
     <h2>¿Listo para la aventura?</h2>
+<<<<<<< HEAD
 
     <div class="button-container">
       <!-- Mostrar botones de Login y Logout -->
@@ -16,10 +17,17 @@
     <!-- Formularios en la misma página -->
     <LoginForm v-if="showLogin" @close="showLogin = false" />
     <RegisterForm v-if="showRegister" @close="showRegister = false" />
+=======
+    <div class="button-container">
+      <button v-if="!isAuthenticated" @click="login">Iniciar sesión</button>
+      <button v-if="isAuthenticated" @click="logoutHandler">Cerrar sesión</button>
+    </div>
+>>>>>>> 76a4494177e8c86dceca107c080705cf4c606608
   </div>
 </template>
 
 <script>
+<<<<<<< HEAD
 import { ref } from 'vue'; // Importar ref para reactividad
 import LoginForm from '../components/LoginForm.vue';
 import RegisterForm from '../components/RegisterForm.vue';
@@ -53,6 +61,39 @@ export default {
       logout,
       isAuthenticated,
       register,
+=======
+import { onMounted, computed } from 'vue';
+import { useAuthStore } from '../stores/auth'; // Asegúrate de que la ruta sea correcta
+import { useAuth0 } from '@auth0/auth0-vue';
+
+export default {
+  setup() {
+    const authStore = useAuthStore();
+    const { loginWithRedirect, logout } = useAuth0(); // Obtén los métodos de Auth0
+
+    const login = () => {
+      loginWithRedirect({
+        appState: {
+          targetUrl: '/Dinojuegos',
+        },
+      });
+    };
+
+    const logoutHandler = () => {
+      logout({ returnTo: window.location.origin }); // Redirigir después de cerrar sesión
+      authStore.logout(); // Actualizar estado en la tienda
+    };
+    const isAuthenticated = computed(() => authStore.isAuthenticated);
+
+    onMounted(() => {
+      authStore.checkAuth(); // Asegúrate de que este método esté bien definido en tu store
+    });
+
+    return {
+      login,
+      logoutHandler,
+      isAuthenticated,
+>>>>>>> 76a4494177e8c86dceca107c080705cf4c606608
     };
   },
 };
@@ -72,7 +113,11 @@ export default {
 
 button {
   padding: 10px 20px;
+<<<<<<< HEAD
   background-color: #28a745; /* Verde moderno */
+=======
+  background-color: #28a745;
+>>>>>>> 76a4494177e8c86dceca107c080705cf4c606608
   color: white;
   border: none;
   border-radius: 5px;
@@ -82,6 +127,10 @@ button {
 }
 
 button:hover {
+<<<<<<< HEAD
   background-color: #218838; /* Verde más oscuro al pasar el ratón */
+=======
+  background-color: #218838;
+>>>>>>> 76a4494177e8c86dceca107c080705cf4c606608
 }
 </style>
