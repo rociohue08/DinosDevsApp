@@ -1,0 +1,136 @@
+[
+  {
+    "nombreCientifico": "Tyrannosaurus Rex",
+    "nombreComun": "T. Rex",
+    "tipoAlimentacion": "Carnívoro",
+    "periodo": "Cretácico",
+    "tamano": "12 metros",
+    "peso": "8 toneladas",
+    "ubicacionGeografica": "Norteamérica",
+    "curiosidades": "Tenía más de 60 dientes afilados de hasta 30 cm.",
+    "image": "../public/images/t-rex.png"
+  },
+  {
+    "nombreCientifico": "Triceratops horridus",
+    "nombreComun": "Triceratops",
+    "tipoAlimentacion": "Herbívoro",
+    "periodo": "Cretácico",
+    "tamano": "9 metros",
+    "peso": "6 toneladas",
+    "ubicacionGeografica": "Norteamérica",
+    "curiosidades": "Su característica principal eran sus tres cuernos faciales.",
+    "image": "../public/images/triceratops.png"
+  },
+  {
+    "nombreCientifico": "Velociraptor mongoliensis",
+    "nombreComun": "Velociraptor",
+    "tipoAlimentacion": "Carnívoro",
+    "periodo": "Cretácico",
+    "tamano": "1.8 metros",
+    "peso": "15 kg",
+    "ubicacionGeografica": "Mongolia",
+    "curiosidades": "Era muy rápido y tenía plumas, pero no podía volar.",
+    "image": "../public/images/velociraptor.png"
+  },
+  {
+    "nombreCientifico": "Brachiosaurus altithorax",
+    "nombreComun": "Brachiosaurus",
+    "tipoAlimentacion": "Herbívoro",
+    "periodo": "Jurásico",
+    "tamano": "21 metros",
+    "peso": "50 toneladas",
+    "ubicacionGeografica": "América del Norte",
+    "curiosidades": "Tenía un cuello extremadamente largo para alcanzar las copas de los árboles.",
+    "image": "../public/images/braquiosaurus.png"
+  },
+  {
+    "nombreCientifico": "Stegosaurus stenops",
+    "nombreComun": "Stegosaurus",
+    "tipoAlimentacion": "Herbívoro",
+    "periodo": "Jurásico",
+    "tamano": "9 metros",
+    "peso": "5 toneladas",
+    "ubicacionGeografica": "América del Norte",
+    "curiosidades": "Se caracterizaba por sus placas óseas en el lomo y una cola con púas.",
+    "image": "../public/images/stegosaurus.png"
+  },
+  {
+    "nombreCientifico": "Spinosaurus aegyptiacus",
+    "nombreComun": "Spinosaurus",
+    "tipoAlimentacion": "Carnívoro",
+    "periodo": "Cretácico",
+    "tamano": "15 metros",
+    "peso": "7 toneladas",
+    "ubicacionGeografica": "Norte de África",
+    "curiosidades": "Era un dinosaurio semiacuático, capaz de cazar tanto en tierra como en agua.",
+    "image": "../public/images/spinosaurus.png"
+  },
+  {
+      "nombreCientifico": "Edaphosaurus pogonias",
+      "nombreComun": "Edafosaurio",
+      "tipoAlimentacion": "Herbívoro",
+      "periodo": "Pérmico",
+      "tamano": "3.5 metros",
+      "peso": "300 kg",
+      "ubicacionGeografica": "América del Norte y Europa",
+      "curiosidades": "Tenía una gran vela en su espalda formada por extensiones de sus vértebras, que probablemente usaba para la regulación de temperatura.",
+      "image": "/images/edhaposaurus.png"
+  
+  },
+  {
+    "nombreCientifico": "Parasaurolophus walkeri",
+    "nombreComun": "Parasaurolophus",
+    "tipoAlimentacion": "Herbívoro",
+    "periodo": "Cretácico",
+    "tamano": "10 metros",
+    "peso": "2.5 toneladas",
+    "ubicacionGeografica": "Norteamérica",
+    "curiosidades": "Tenía una gran cresta tubular en su cabeza, que probablemente usaba para comunicarse.",
+    "image": "../public/images/Parasaurolophus.png"
+  },
+{
+  "nombreCientifico": "Argentinosaurus huinculensis",
+  "nombreComun": "Argentinosaurio",
+  "tipoAlimentacion": "Herbívoro",
+  "periodo": "Cretácico",
+  "tamano": "30-40 metros",
+  "peso": "80-100 toneladas",
+  "ubicacionGeografica": "Sudamérica (Argentina)",
+  "curiosidades": "Es uno de los dinosaurios más grandes que se conocen, y su tamaño era tan colosal que probablemente su corazón tenía que bombear sangre a lo largo de un cuello de hasta 12 metros.",
+  "image": "../public/images/argentinosaurus.png"
+},
+{
+  "nombreCientifico": "Pterodactylus antiquus",
+  "nombreComun": "Pterodáctilo",
+  "tipoAlimentacion": "Carnívoro",
+  "periodo": "Jurásico",
+  "tamano": "1-2 metros de envergadura",
+  "peso": "2-10 kg",
+  "ubicacionGeografica": "Europa",
+  "curiosidades": "Era un cazador aéreo y se alimentaba de peces y pequeños animales. Sus alas estaban formadas por una membrana de piel y músculo.",
+  "image": "../public/images/Pterodáctilo.png"
+},
+{
+  "nombreCientifico": "Giganotosaurus carolinii",
+  "nombreComun": "Giganotosaurio",
+  "tipoAlimentacion": "Carnívoro",
+  "periodo": "Cretácico",
+  "tamano": "13-14 metros",
+  "peso": "8-10 toneladas",
+  "ubicacionGeografica": "Sudamérica (Argentina)",
+  "curiosidades": "Era más grande que el T. Rex, pero tenía un cerebro más pequeño. Probablemente cazaba en manadas para derribar grandes presas.",
+  "image": "../public/images/gigantosaurio.png"
+},
+{
+  "nombreCientifico": "Carnotaurus sastrei",
+  "nombreComun": "Carnotauro",
+  "tipoAlimentacion": "Carnívoro",
+  "periodo": "Cretácico",
+  "tamano": "8-9 metros",
+  "peso": "1.5 toneladas",
+  "ubicacionGeografica": "Sudamérica (Argentina)",
+  "curiosidades": "Se caracterizaba por tener cuernos sobre los ojos y una estructura corporal ligera que le permitía ser un depredador rápido.",
+  "image": "../public/images/carnotaurus.png"
+}
+
+]
