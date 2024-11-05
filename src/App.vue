@@ -15,7 +15,6 @@ import { RouterLink, RouterView } from 'vue-router'
     <nav>
       <RouterLink to="/">Home</RouterLink>
       <RouterLink to="/informacion">Información</RouterLink>
-      <!-- <RouterLink to="/menu">Menú</RouterLink> -->
       <RouterLink to="/juegos">Juegos</RouterLink>
       <RouterLink to="/realidad-aumentada">Realidad Aumentada</RouterLink>
     </nav>
@@ -23,7 +22,6 @@ import { RouterLink, RouterView } from 'vue-router'
 
   <RouterView />
 </template>
-
 
 <style scoped>
 header {
@@ -47,13 +45,9 @@ nav {
 nav a {
   display: inline-block;
   padding: 0 1rem;
-  gap:15px;
   text-decoration: none;
-  color:black;
-}
-
-nav a:first-of-type {
-  margin-left: 0; /* Quitar margen del primer enlace */
+  color: black;
+  transition: color 0.3s; /* Agrega una transición suave para el color */
 }
 
 nav a.router-link-exact-active {
