@@ -7,20 +7,23 @@
     <h2>¿Listo para la aventura?</h2>
 
     <div class="button-container">
-      <!-- mostrar los formularios de login y registro -->
-      <button @click="showLogin = true">Login</button>
-      <button @click="showRegister = true">Register</button>
-
-      <!-- Formularios en la misma página -->
-      <LoginForm v-if="showLogin" @close="showLogin = false" />
-      <RegisterForm v-if="showRegister" @close="showRegister = false" />
+      <!-- Mostrar botones de Login y Logout -->
+      <button v-if="!isAuthenticated" @click="login">Iniciar sesión</button>
+      <button v-if="isAuthenticated" @click="logout">Cerrar sesión</button>
+      <button v-if="!isAuthenticated" @click="register">Registrarse</button>
     </div>
+
+    <!-- Formularios en la misma página -->
+    <LoginForm v-if="showLogin" @close="showLogin = false" />
+    <RegisterForm v-if="showRegister" @close="showRegister = false" />
   </div>
 </template>
 
 <script>
+import { ref } from 'vue'; // Importar ref para reactividad
 import LoginForm from '../components/LoginForm.vue';
 import RegisterForm from '../components/RegisterForm.vue';
+import { useAuth0 } from "@auth0/auth0-vue";
 
 export default {
   name: 'DinoHome',
@@ -28,10 +31,28 @@ export default {
     LoginForm,
     RegisterForm,
   },
-  data() {
+  setup() {
+    const { loginWithRedirect, logout, isAuthenticated } = useAuth0();
+    const showLogin = ref(false); // Usando ref para reactividad
+    const showRegister = ref(false); // Usando ref para reactividad
+
+    const login = () => {
+      loginWithRedirect(); // Redirigir al usuario a Auth0 para iniciar sesión
+      showLogin.value = false; // Cerrar el formulario de Login si se inicia sesión
+    };
+
+    const register = () => {
+      // Redirigir al usuario a la página de registro de Auth0
+      window.location.href = `https://dev-p2a38yay4uw13qpa.us.auth0.com/signup`;
+    };
+
     return {
-      showLogin: false,
-      showRegister: false,
+      showLogin,
+      showRegister,
+      login,
+      logout,
+      isAuthenticated,
+      register,
     };
   },
 };
@@ -45,55 +66,22 @@ export default {
   align-items: center;
 }
 
-h1 {
-  color: green;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: 60px;
-}
-
-h2 {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-p {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  width: 700px;
-  text-align: center;
-}
-
-/* Estilos de los botones */
 .button-container {
-  display: flex;
-  gap: 1rem;
-  padding: 30px;
-  background: rgb(41, 39, 39);
-  border-radius: 15px;
+  margin-top: 20px;
 }
 
 button {
-  background-color: #4CAF50; /* Color verde moderno */
+  padding: 10px 20px;
+  background-color: #28a745; /* Verde moderno */
   color: white;
   border: none;
-  padding: 12px 24px;
-  font-size: 18px;
-  font-weight: bold;
-  border-radius: 8px;
+  border-radius: 5px;
   cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  font-size: 16px;
+  transition: background-color 0.3s;
 }
 
-/* Efecto hover */
 button:hover {
-  background-color: #45A049; /* Verde más oscuro al pasar el ratón */
-  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
-  transform: scale(1.05); /* Aumenta ligeramente el tamaño */
-}
-
-/* Efecto active */
-button:active {
-  background-color: #388E3C; /* Verde aún más oscuro al hacer clic */
-  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.4);
-  transform: scale(0.98); /* Reduce ligeramente el tamaño */
+  background-color: #218838; /* Verde más oscuro al pasar el ratón */
 }
 </style>

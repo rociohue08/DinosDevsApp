@@ -1,18 +1,5 @@
-
 <script>
-import AuthForm from '@/components/AuthForm.vue'
 
-export default {
-  components: { AuthForm },
-  methods: {
-    handleLogin() {
-      this.$router.push('/menu')
-    },
-    handleRegister() {
-      this.$router.push('/menu')
-    },
-  },
-}
 </script>
 
 <template>
@@ -20,12 +7,6 @@ export default {
     <h2>Juegos de Dinosaurios</h2>
     <!-- Juegos interactivos aquí -->
   </div>
-
-  <div class="formContainer">
-      <AuthForm @login="handleLogin" @register="handleRegister" />
-  </div>
-
-
 </template>
 <style scoped>
 .formContainer {
